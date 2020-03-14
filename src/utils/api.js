@@ -10,7 +10,7 @@ const BASE = 'http://localhost:1337';
 const api = (url, options = {}) => fetch(`${BASE}${url}`, options)
   .then((res) => res.json())
   .then((data) => {
-    if (!data || !data.result === 'success') {
+    if (!data || data.error) {
       throw new Error(data.error);
     }
     return data;

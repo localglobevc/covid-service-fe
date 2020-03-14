@@ -4,6 +4,11 @@ const Text = styled.p`
   font-size: 1em;
   margin: 0;
   margin-bottom: 10px;
+  ${props => props.center && 'text-align: center;'}
+`;
+
+const ErrorText = styled(Text)`
+  color: red;
 `;
 
 const Title = styled(Text)`
@@ -44,6 +49,7 @@ const Input = styled.input`
   ${props => props.fullwidth && 'width: 100%;'}
   color: black;
   border: 3px solid;
+  ${props => props.error && 'border-color: red;'}
   background-color: white;
   font-size: 1.2em;
   font-weight: bold;
@@ -55,6 +61,8 @@ const Input = styled.input`
 `;
 
 export {
+  Text,
+  ErrorText,
   Title,
   Button,
   InvertedButton,
