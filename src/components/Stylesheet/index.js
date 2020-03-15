@@ -17,9 +17,9 @@ const Title = styled(Text)`
 
 const Button = styled.button`
   min-height: 50px;
-  min-width: 200px;
-  ${props => props.fullwidth && 'width: 100%;'}
-  padding: 0;
+  min-width: 100px;
+  ${props => props.fullwidth ? 'width: 100%;' : 'margin-right: 10px;' }
+  padding: 0 10px;
   margin-bottom: 10px;
   border: 3px solid;
   color: black;
@@ -27,6 +27,7 @@ const Button = styled.button`
   font-size: 1.2em;
   font-weight: bold;
   transition: 0.1s;
+  ${props => props.inverted && 'color: white; background-color: black; border-color: black;'}
   &:focus {
     outline: 0;
   }
@@ -34,12 +35,10 @@ const Button = styled.button`
     opacity: 0.5;
     cursor: pointer;
   }
-`;
-
-const InvertedButton = styled(Button)`
-  color: white;
-  background-color: black;
-  border-color: black;
+  &:active {
+    opacity: 1;
+    cursor: pointer;
+  }
 `;
 
 const Input = styled.input`
@@ -65,6 +64,5 @@ export {
   ErrorText,
   Title,
   Button,
-  InvertedButton,
   Input
 }

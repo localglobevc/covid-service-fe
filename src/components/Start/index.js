@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
-import {Button, InvertedButton, Input, Title, ErrorText} from '../Stylesheet';
+import {Button, Input, Title, ErrorText} from '../Stylesheet';
 import {GET} from '../../utils/api';
 
 const StartContainer = styled.div`
@@ -68,7 +68,7 @@ class Start extends Component {
         <StartContainer>
           <Title>Discover services available in your area during the COVID-19 outbreak</Title>
           <Input placeholder="Enter your postcode..." onChange={this.handlePostcodeChange} value={postcode} fullwidth error={error && true}/>
-          <InvertedButton fullwidth onClick={this.handleSubmit}>Continue</InvertedButton>
+          <Button fullwidth inverted onClick={this.handleSubmit}>Continue</Button>
           <ErrorText center>{error}</ErrorText>
         </StartContainer>
       </VerticalCenter>
