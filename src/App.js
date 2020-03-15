@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 import Start from './components/Start';
@@ -16,9 +15,7 @@ function App() {
     <Router>
       <Switch>
         <Route path="/area/:postcode" component={Area}/>
-        <Route path="/">
-          <Start/>
-        </Route>
+        <Route path="/" component={Start}/>
       </Switch>
     </Router>
   );

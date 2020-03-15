@@ -4,7 +4,7 @@ let innerToken = '';
 
 // const BASE = 'http://localhost:8080';
 // const BASE = 'http://localhost:8080';
-const BASE = 'http://localhost:1337';
+const BASE = 'http://3.8.127.243:1337';
 
 
 const api = (url, options = {}) => fetch(`${BASE}${url}`, options)

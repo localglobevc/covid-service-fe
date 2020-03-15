@@ -3,7 +3,6 @@
   src: url('https://assets.publishing.service.gov.uk/static/fonts/v1-a2452cb66f-bold-be83c947da6c602697be56d5f04bab2074ad9e8e7fe39807f814654fd691d328.woff2');
 }
 
-body, html, #root {
+body, html {
   font-family: "nta", Arial, sans-serif;
-  height: 100%;
 }

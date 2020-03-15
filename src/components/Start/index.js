@@ -10,7 +10,7 @@ const StartContainer = styled.div`
 `;
 
 const VerticalCenter = ({children}) => (
-  <div style={{display: 'table', height: '100%', width: '100%'}}>
+  <div style={{display: 'table', height: '90vh', width: '100%'}}>
     <div style={{display: 'table-cell', verticalAlign: 'middle'}}>
       {children}
     </div>
@@ -43,7 +43,7 @@ class Start extends Component {
 
     GET(`/geocode/${postcode}`)
       .then(result => {
-        console.log(result)
+        this.props.history.push(`/area/${postcode}`);
       })
       .catch(e => {
         this.setState({error: e.message})
