@@ -15,6 +15,10 @@ const Title = styled(Text)`
   font-size: 2em;
 `;
 
+const Link = styled(Text)`
+  color: #0a82d1;
+`;
+
 const Button = styled.button`
   min-height: 50px;
   min-width: 100px;
@@ -64,5 +68,6 @@ export {
   ErrorText,
   Title,
   Button,
-  Input
+  Input,
+  Link
 }
